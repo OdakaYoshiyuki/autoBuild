@@ -25,6 +25,9 @@ if "!TIME!" gtr "18:00:00.00" (
 endlocal
 
 
+IF EXIST "..\..\..\OneDrive\XX_autoMail\odakaBox\"èIóπ.txt" (GOTO GOTO) ELSE GOTO RE_SATRT
+
+
 
 :RE_SATRT
 rem 5ïbë“Ç¬
