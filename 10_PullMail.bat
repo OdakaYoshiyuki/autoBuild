@@ -20,12 +20,12 @@ rem -----
 setlocal ENABLEDELAYEDEXPANSION
 echo !TIME!
 if "!TIME!" gtr "18:00:00.00" (
-	GOTO BAT_END
+ 	GOTO BAT_END
 )
 endlocal
 
 
-IF EXIST "..\..\..\OneDrive\XX_autoMail\odakaBox\"èIóπ.txt" (GOTO GOTO) ELSE GOTO RE_SATRT
+IF EXIST "..\..\..\OneDrive\XX_autoMail\odakaBox\èIóπ.txt" (GOTO BAT_END) ELSE GOTO RE_SATRT
 
 
 
@@ -35,3 +35,5 @@ timeout /t 5
 GOTO BAT_START
 
 :BAT_END
+
+
