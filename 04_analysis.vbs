@@ -20,15 +20,14 @@ Loop
 rFile.Close
 
 
-
+reqMail = 0
 Set rFile = FS.OpenTextFile("result.txt")  'ファイルを開く
 Do Until rFile.AtEndOfStream
 	tmpLine = rFile.ReadLine
-	reqMail = 0
 	If tmpLine = "ビルドに成功しました。" Then
 		result = tmpLine
 		buildFali = 0
-		If preBuildFalier = 1
+		If preBuildFalier = 1 Then
 			reqMail = 1
 		End If
 	ElseIf tmpLine = "ビルドに失敗しました。" Then
@@ -43,7 +42,6 @@ WScript.Echo result
 Set wFile = FS.OpenTextFile("件名.txt", 2, True)
 wFile.WriteLine result
 wFile.Close
-
 
 
 ' フラグを書き込む
