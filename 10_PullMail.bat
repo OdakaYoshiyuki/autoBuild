@@ -1,5 +1,7 @@
 @echo off
 
+rem åªç›ÇÃà íuÇ…à⁄ìÆ
+cd %~dp0
 
 :BAT_START
 
@@ -14,7 +16,7 @@ git push origin master
 
 
 rem 18:00Ç…Ç»Ç¡ÇΩÇÁèIóπ
-rem-----
+rem -----
 setlocal ENABLEDELAYEDEXPANSION
 echo !TIME!
 if "!TIME!" gtr "18:00:00.00" (
