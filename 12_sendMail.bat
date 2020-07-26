@@ -13,10 +13,10 @@ for /f %%a in (à∂êÊ.txt) do (
   SET destination=%%a
 )
 
-copy "ñ{ï∂.txt" C:\Users\Y_ODAKA\Desktop\smail\mail.txt
+copy "ñ{ï∂.txt" ..\smail\mail.txt
 
 
-cd C:\Users\Y_ODAKA\Desktop\smail
+cd ..\smail
 smail -hsmtp.gmail.com  -fy.odaka.519@gmail.com -s%subject% -Fmail.txt %destination% -d -i
 
 
