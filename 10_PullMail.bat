@@ -8,8 +8,6 @@
 git pull origin master
 cscript 11_flagAnalysis.vbs
 
-del "flag.txt"
-rename "_flag.txt" "flag.txt"
 
 git commit -a -m "フラグクリア"
 git push origin master
