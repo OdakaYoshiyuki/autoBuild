@@ -9,4 +9,3 @@ cscript 04_analysis.vbs
 git commit -a -m "ƒrƒ‹ƒhŒ‹‰Ê‚ðpush"
 git push origin master
 
-pause
