@@ -4,7 +4,7 @@ call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd
 
 rem MSBuild‚Åƒrƒ‹ƒh‚·‚é(C++)
 cd %~dp0
-MSBuild ..\01_SBL_Xaqro_Printer_odaka_hituji\project\0000\build_sim\TARGET.sln /t:build
+MSBuild ..\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET.sln /t:build
 
 if %ERRORLEVEL% neq 0 (
     echo ErrorLevel:%ERRORLEVEL%
