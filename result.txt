@@ -1,7 +1,43 @@
 Microsoft (R) Build Engine バージョン 14.0.25420.1
 Copyright (C) Microsoft Corporation. All rights reserved.
 
-MSBUILD : error MSB1009: プロジェクト ファイルが存在しません。
-スイッチ: ..\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET.sln
-ErrorLevel:1
-ビルド失敗
+このソリューション内のプロジェクトを 1 度に 1 つずつビルドします。並行ビルドを有効にするには、"/m" スイッチを追加してください。
+2020/08/01 18:48:17 にビルドを開始しました。
+ノード 1 上のプロジェクト "C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET.sln" (build ターゲット)。
+ValidateSolutionConfiguration:
+  ソリューション構成 "release_MFP|Win32" をビルドしています。
+プロジェクト "C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET.sln" (1) は、ノード 1 上に "C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\TARGET_Sim.vcxproj" (2) をビルドしています (既定のターゲット)。
+InitializeBuildStatus:
+  "AlwaysCreate" が指定されたため "release_MFP\TARGET_Sim.tlog\unsuccessfulbuild" を作成しています。
+ClCompile:
+  すべての出力が最新のものです。
+  すべての出力が最新のものです。
+  すべての出力が最新のものです。
+ResourceCompile:
+  すべての出力が最新のものです。
+Link:
+  すべての出力が最新のものです。
+  TARGET_Sim.vcxproj -> C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\release_MFP\EngineSim.exe
+  TARGET_Sim.vcxproj -> release_MFP\EngineSim.pdb (Full PDB)
+PostBuildEvent:
+  C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\\tools\createproduct.bat C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim TARGET_Sim release_MFP 
+  :VCEnd
+  C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\release_MFP
+          1 個のファイルをコピーしました。
+          1 個のファイルをコピーしました。
+          1 個のファイルをコピーしました。
+          1 個のファイルをコピーしました。
+          1 個のファイルをコピーしました。
+          1 個のファイルをコピーしました。
+          1 個のファイルをコピーしました。
+FinalizeBuildStatus:
+  ファイル "release_MFP\TARGET_Sim.tlog\unsuccessfulbuild" を削除しています。
+  "release_MFP\TARGET_Sim.tlog\TARGET_Sim.lastbuildstate" のタッチ タスクを実行しています。
+プロジェクト "C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\TARGET_Sim.vcxproj" (既定のターゲット) のビルドが完了しました。
+プロジェクト "C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET.sln" (build ターゲット) のビルドが完了しました。
+
+ビルドに成功しました。
+    0 個の警告
+    0 エラー
+
+経過時間 00:00:02.54
