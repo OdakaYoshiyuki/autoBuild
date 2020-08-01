@@ -2,7 +2,7 @@ Microsoft (R) Build Engine バージョン 14.0.25420.1
 Copyright (C) Microsoft Corporation. All rights reserved.
 
 このソリューション内のプロジェクトを 1 度に 1 つずつビルドします。並行ビルドを有効にするには、"/m" スイッチを追加してください。
-2020/08/01 19:15:31 にビルドを開始しました。
+2020/08/01 19:17:59 にビルドを開始しました。
 ノード 1 上のプロジェクト "C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET.sln" (build ターゲット)。
 ValidateSolutionConfiguration:
   ソリューション構成 "release_MFP|Win32" をビルドしています。
@@ -29,6 +29,6 @@ ClCompile:
     0 個の警告
     2 エラー
 
-経過時間 00:00:06.31
+経過時間 00:00:06.42
 ErrorLevel:1
 ビルド失敗
