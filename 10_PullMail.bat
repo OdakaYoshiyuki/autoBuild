@@ -11,7 +11,8 @@ git pull origin master
 cscript 11_flagAnalysis.vbs
 
 
-git commit -a -m "フラグクリア"
+git commit -m 'フラグクリア' -- flag.txt
+rem git commit -a -m "フラグクリア"
 git push origin master
 
 
