@@ -3,9 +3,10 @@ Dim FS
 Dim wFile     ' ファイル書き込み用
 Dim rFile     ' ファイル読み込み用
 Dim tmpLine
-Dim result
+Dim subject
 Dim preBuildFali
 Dim buildFali
+Dim buildWarning
 Dim reqMail
 Dim hit
 Set FS = WScript.CreateObject("Scripting.FileSystemObject")
@@ -30,6 +31,7 @@ wFile.WriteLine "結果は下記です。"
 wFile.WriteLine ""
 
 buildFali = 0
+buildWarning = 0
 reqMail = 0
 Set rFile = FS.OpenTextFile("result.txt")  'ファイルを開く
 Do Until rFile.AtEndOfStream
@@ -44,7 +46,7 @@ Do Until rFile.AtEndOfStream
 	'warningを探索
 	hit = InStr( tmpLine, ": warning" )      '検索する
 	If hit <> 0 Then
-		buildFali = 1
+		buildWarning = 1
 		wFile.WriteLine tmpLine
 	End If
 
@@ -80,19 +82,26 @@ Loop
 
 If buildFali = 1 Then
 	reqMail = 1
+	subject = "ビルドに失敗しました。"
+ElseIf buildWarning = 1 Then
+	reqMail = 1
+	subject = "ビルドで警告が出ています。"
+Else
+	reqMail = 0
+	subject = "ビルドに成功しました"
 End If
+
 If preBuildFalier = 1 Then
 	reqMail = 1
 End If
-
 
 wFile.WriteLine "以上です"
 wFile.Close '本文close
 
 
-WScript.Echo result
+WScript.Echo subject
 Set wFile = FS.OpenTextFile("件名.txt", 2, True)
-wFile.WriteLine result
+wFile.WriteLine subject
 wFile.Close
 
 
