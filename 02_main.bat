@@ -23,5 +23,4 @@ git push origin master
 
 if %MAIL_TYPE% == ビルド結果をoutlookでメール送信 cscript 20_sendOutLookMail.vbs
 
-pause
 
