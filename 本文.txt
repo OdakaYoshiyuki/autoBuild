@@ -10,9 +10,7 @@ SIM 2YJ環境のビルド結果
     0 エラー
 
 SIM 0000環境のビルド結果
-..\..\eng_custom_pm\SDAPrint\FUNCLSU\src\FUNCLSUManager.cpp(407): error C2065: 'SPEED_TYPE_ONE_QUATER': 定義されていない識別子です。 [C:\Users\od740705\Documents\01_jenkinsBuild\01_SBL_Xaqro_Printer_P4Git\project\0000\build_sim\TARGET_Sim\TARGET_Sim.vcxproj]
-ビルドに失敗しました。
-  ..\..\eng_custom_pm\SDAPrint\FUNCLSU\src\FUNCLSUManager.cpp(407): error C2065: 'SPEED_TYPE_ONE_QUATER': 定義されていない識別子です。 [C:\Users\od740705\Documents\01_jenkinsBuild\01_SBL_Xaqro_Printer_P4Git\project\0000\build_sim\TARGET_Sim\TARGET_Sim.vcxproj]
+ビルドに成功しました。
     0 個の警告
-    1 エラー
+    0 エラー
 以上です
