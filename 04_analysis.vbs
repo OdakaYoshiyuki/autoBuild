@@ -95,6 +95,9 @@ If preBuildFalier = 1 Then
 	reqMail = 1
 End If
 
+reqMail = 1 'ébíË
+
+
 wFile.WriteLine "à»è„Ç≈Ç∑"
 wFile.Close 'ñ{ï∂close
 
