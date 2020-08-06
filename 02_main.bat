@@ -7,8 +7,10 @@ rem setingファイルから読み込む
     SET /P BUILD_TYPE=
     SET /P MAIL_TYPE=
     SET /P P4_SYNC=
+    SET /P P4_PASS=
 )< setting.txt
 
+echo %P4_PASS% | p4 login
 if %P4_SYNC% == P4を最新にする p4 set %PJ_NAME%
 if %P4_SYNC% == P4を最新にする p4 sync
 
