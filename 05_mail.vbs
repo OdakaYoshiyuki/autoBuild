@@ -32,7 +32,7 @@ Option Explicit
     Dim objLink
 
     Set objIE = CreateObject("InternetExplorer.Application")
-    objIE.Visible = True
+    objIE.Visible = False
 
     'IEÇäJÇ≠
     objIE.navigate "http://enginesd.php.xdomain.jp/confirm.html"
@@ -48,7 +48,7 @@ Option Explicit
     objIE.document.getElementsByName("content")(0).Value = mailBody
 
     'ëóêM
-'    objIE.document.forms(0).submit()
+     objIE.document.forms(0).submit()
 
-'    objIE.Quit
-'    Set objIE = Nothing
+    objIE.Quit
+    Set objIE = Nothing
