@@ -5,13 +5,9 @@ ESD 小高さんのPCです
 結果は下記です。
 
 SIM 2YJ環境のビルド結果
-..\..\eng_custom_pm\SDAPrint\FUNCDrive\src\FUNCDriveAdjust.cpp(59): error C2065: 'a': 定義されていない識別子です。 [C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\TARGET_Sim.vcxproj]
-..\..\eng_custom_pm\SDAPrint\FUNCDrive\src\FUNCDriveAdjust.cpp(59): error C2143: 構文エラー: ';' が 'switch' の前にありません。 [C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\TARGET_Sim.vcxproj]
-ビルドに失敗しました。
-  ..\..\eng_custom_pm\SDAPrint\FUNCDrive\src\FUNCDriveAdjust.cpp(59): error C2065: 'a': 定義されていない識別子です。 [C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\TARGET_Sim.vcxproj]
-  ..\..\eng_custom_pm\SDAPrint\FUNCDrive\src\FUNCDriveAdjust.cpp(59): error C2143: 構文エラー: ';' が 'switch' の前にありません。 [C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\TARGET_Sim.vcxproj]
+ビルドに成功しました。
     0 個の警告
-    2 エラー
+    0 エラー
 
 SIM 0000環境のビルド結果
 ビルドに成功しました。
