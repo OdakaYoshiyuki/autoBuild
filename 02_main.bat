@@ -21,7 +21,7 @@ cscript 04_analysis.vbs
 cscript 05_mail.vbs
 
 rem git commit -a -m "ビルド結果をpush"
-git commit -m "ビルド結果をpush" flag.txt 宛先.txt result.txt 件名.txt 本文.txt
+git commit -m "ビルド結果をpush" flag.txt result.txt 件名.txt 本文.txt
 git push origin master
 
 

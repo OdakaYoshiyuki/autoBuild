@@ -1,3 +1,11 @@
+'除外する府エラー
+Dim ignErr(200)
+Dim ignNum
+ignNum = -1
+ignErr(add1(ignNum)) = "SSYSInformationTCCSha256.obj : warning LNK4099: PDB"
+ignErr(add1(ignNum)) = "SSYSInformationTCCDriver.obj : warning LNK4099: PDB"
+ignErr(add1(ignNum)) = "SSYSInformationTCCController.obj : warning LNK4099: PDB"
+ignErr(add1(ignNum)) = "KernelLib.lib"
 
 Dim FS
 Dim wFile     ' ファイル書き込み用
@@ -6,7 +14,9 @@ Dim tmpLine
 Dim subject
 Dim preBuildFali
 Dim buildFali
+Dim buildFaliNum
 Dim buildWarning
+Dim buildWarningNum
 Dim reqMail
 Dim hit
 Set FS = WScript.CreateObject("Scripting.FileSystemObject")
@@ -31,7 +41,9 @@ wFile.WriteLine "結果は下記です。"
 wFile.WriteLine ""
 
 buildFali = 0
+buildFaliNum = 0
 buildWarning = 0
+buildWarningNum = 0
 reqMail = 0
 Set rFile = FS.OpenTextFile("result.txt")  'ファイルを開く
 Do Until rFile.AtEndOfStream
@@ -40,22 +52,29 @@ Do Until rFile.AtEndOfStream
 	'エラーを探索
 	hit = InStr( tmpLine, ": error" )      '検索する
 	If hit <> 0 Then
+		buildFaliNum = buildFaliNum + 1
 		buildFali = 1
 		wFile.WriteLine tmpLine
 	End If
 	'warningを探索
 	hit = InStr( tmpLine, ": warning" )      '検索する
 	If hit <> 0 Then
-		buildWarning = 1
-		wFile.WriteLine tmpLine
+		hit = ignJudge(tmpLine)		'除外エラーにhitしなかったらカウント
+		If hit = 0 Then
+			buildWarningNum = buildWarningNum + 1
+			buildWarning = 1
+			wFile.WriteLine tmpLine
+		End If
 	End If
 
 	'エラー、警告個数
 	hit = InStr( tmpLine, " 個の警告" )      '検索する
 	If hit <> 0 Then
-		wFile.WriteLine tmpLine
+		wFile.WriteLine "    " & buildWarningNum & " 個の警告"
+		buildWarningNum = 0
 		tmpLine = rFile.ReadLine
-		wFile.WriteLine tmpLine
+		wFile.WriteLine "    " & buildFaliNum & " エラー"
+		buildFaliNum = 0
 	End If
 
 	hit = InStr( tmpLine, "SIM 2YJ環境のビルド" )      '検索する
@@ -110,14 +129,35 @@ wFile.Close
 
 ' フラグを書き込む
 Set wFile = FS.OpenTextFile("flag.txt", 2, True)
-wFile.WriteLine "＜前回ビルド失敗＞"
+wFile.WriteLine "[前回ビルド失敗]"
 wFile.WriteLine buildFali
-wFile.WriteLine "＜メールを送る＞"
-wFile.WriteLine reqMail
 
 
 rFile.Close
 wFile.Close
 
 WScript.Echo "終了"
+
+
+'-----------SUB関数----------------
+Function add1(ret)
+    ignNum = ignNum+1
+    ret = ignNum
+    add1 = ret
+End Function
+
+
+Function ignJudge(readLine)
+    Dim ign
+
+    ret = 0
+    for i=0 to ignNum
+        ign = InStr( readline, ignErr(i) )      '検索する
+        If ign <> 0 Then
+		ret = 1
+        End If
+    next
+    ignJudge = ret
+End Function
+
 

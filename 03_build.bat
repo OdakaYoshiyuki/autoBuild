@@ -12,7 +12,7 @@ rem PJnaemをsetingファイルから読み込む
 rem MSBuildでビルドする(C++)
 cd %~dp0
 echo SIM 2YJ環境のビルド
-MSBuild ..\%PJ_NAME%\project\02YJ\build_sim\TARGET.sln /t:build
+MSBuild ..\%PJ_NAME%\project\02YJ\build_sim\TARGET.sln /t:rebuild
 
 if %ERRORLEVEL% neq 0 (
     echo ErrorLevel:%ERRORLEVEL%
@@ -20,7 +20,7 @@ if %ERRORLEVEL% neq 0 (
 )
 
 echo SIM 0000環境のビルド
-MSBuild ..\%PJ_NAME%\project\0000\build_sim\TARGET.sln /t:build
+MSBuild ..\%PJ_NAME%\project\0000\build_sim\TARGET.sln /t:rebuild
 
 if %ERRORLEVEL% neq 0 (
     echo ErrorLevel:%ERRORLEVEL%
