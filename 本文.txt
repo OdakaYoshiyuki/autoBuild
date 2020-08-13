@@ -5,12 +5,8 @@ ESD 小高さんのPCです
 結果は下記です。
 
 SIM 2YJ環境のビルド結果
-SSYSInformationTCCSha256.obj : warning LNK4099: PDB 'vc100.pdb' が 'SSYSInformationTCCSha256.obj' で、または 'C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\release_MFP\vc100.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。 [C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\TARGET_Sim.vcxproj]
-SSYSInformationTCCDriver.obj : warning LNK4099: PDB 'vc100.pdb' が 'SSYSInformationTCCDriver.obj' で、または 'C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\release_MFP\vc100.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。 [C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\TARGET_Sim.vcxproj]
 ビルドに成功しました。
-  SSYSInformationTCCSha256.obj : warning LNK4099: PDB 'vc100.pdb' が 'SSYSInformationTCCSha256.obj' で、または 'C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\release_MFP\vc100.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。 [C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\TARGET_Sim.vcxproj]
-  SSYSInformationTCCDriver.obj : warning LNK4099: PDB 'vc100.pdb' が 'SSYSInformationTCCDriver.obj' で、または 'C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\release_MFP\vc100.pdb' に見つかりません。デバッグ情報がないものとして、オブジェクトにリンクします。 [C:\Users\Y_ODAKA\Documents\jenkins\01_SBL_Xaqro_Printer_odaka_hituji\project\02YJ\build_sim\TARGET_Sim\TARGET_Sim.vcxproj]
-    28 個の警告
+    0 個の警告
     0 エラー
 
 SIM 0000環境のビルド結果
