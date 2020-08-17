@@ -43,12 +43,20 @@ Option Explicit
     Loop
 
 
-    objIE.document.getElementsByName("to")(0).Value = "y_odaka@hotmail.com"
+    objIE.document.getElementsByName("to")(0).Value = mailTo
     objIE.document.getElementsByName("title")(0).Value = mailSubject
     objIE.document.getElementsByName("content")(0).Value = mailBody
 
+
     '送信
-     objIE.document.forms(0).submit()
+    objIE.document.forms(0).submit()
+
+
+    'ページが読み込まれるまで待つ
+    Do While objIE.Busy = True Or objIE.readyState <> 4
+        WScript.Sleep 100        
+    Loop
+
 
     objIE.Quit
     Set objIE = Nothing
