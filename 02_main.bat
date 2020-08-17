@@ -5,7 +5,6 @@ rem setingƒtƒ@ƒCƒ‹‚©‚ç“Ç‚Ýž‚Þ
 (
     SET /P PJ_NAME=
     SET /P BUILD_TYPE=
-    SET /P MAIL_TYPE=
     SET /P P4_SYNC=
     SET /P P4_PASS=
 )< setting.txt
