@@ -10,7 +10,7 @@ rem setingファイルから読み込む
     SET /P P4_PASS=
 )< setting.txt
 
-echo %P4_PASS% | p4 login
+if %P4_SYNC% == P4を最新にする echo %P4_PASS% | p4 login
 if %P4_SYNC% == P4を最新にする p4 set %PJ_NAME%
 if %P4_SYNC% == P4を最新にする p4 sync
 

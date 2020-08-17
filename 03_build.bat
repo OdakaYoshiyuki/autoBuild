@@ -5,6 +5,7 @@ call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd
 rem PJnaemをsetingファイルから読み込む
 (
     SET /P PJ_NAME=
+    SET /P BUILD_TYPE=
 )< setting.txt
 
 
@@ -26,6 +27,16 @@ if %ERRORLEVEL% neq 0 (
     echo ErrorLevel:%ERRORLEVEL%
     echo ビルド失敗
 )
+
+if not %BUILD_TYPE% == Keilでビルドする GOTO BAT_END
+
+rem echo SIM 2YJ環境のビルド
+
+
+rem echo SIM 0000環境のビルド
+
+
+:BAT_END
 
 
 rem %~dp0 　⇒　%0にオプション構文の『 ~ 』と『 d 』と『 p 』が付いたものです。
