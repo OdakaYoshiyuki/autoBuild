@@ -19,6 +19,7 @@ Dim buildWarning
 Dim buildWarningNum
 Dim reqMail
 Dim hit
+Dim hit2
 Set FS = WScript.CreateObject("Scripting.FileSystemObject")
 
 ' フラグを読み込む
@@ -86,6 +87,11 @@ Do Until rFile.AtEndOfStream
 		wFile.WriteLine ""
 		wFile.WriteLine "SIM 0000環境のビルド結果"
 	End If
+	hit = InStr( tmpLine, "Keil 2YJ環境のビルド" )      '検索する
+	If hit <> 0 Then
+		wFile.WriteLine ""
+		wFile.WriteLine "Keil 2YJ環境のビルド結果"
+	End If
 
 	'その他のコメント
 	hit = InStr( tmpLine, "ビルドに成功しました。" )      '検索する
@@ -98,8 +104,9 @@ Do Until rFile.AtEndOfStream
 		wFile.WriteLine tmpLine
 	End If
 	'完了
-	hit = InStr( tmpLine, "のビルドが完了しました。" )      '検索する
-	If hit <> 0 Then
+	hit = InStr( tmpLine, "2YJ_1000" )      '検索する
+	hit2 = InStr( tmpLine, "のビルドが完了しました" )      '検索する
+	If (hit <> 0) and (hit2 <> 0) Then
 		wFile.WriteLine tmpLine
 	End If
 Loop
