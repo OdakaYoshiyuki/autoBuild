@@ -30,14 +30,16 @@ if %ERRORLEVEL% neq 0 (
 
 if not %BUILD_TYPE% == Keilでビルドする GOTO BAT_END
 
-rem echo SIM 2YJ環境のビルド
+echo Keil 2YJ環境のビルド
+cd ..\%PJ_NAME%\project\02YJ\build_target\TARGET_main
+call release_MFP.BAT
 
-
-rem echo SIM 0000環境のビルド
+rem echo Keil 0000環境のビルド
 
 
 :BAT_END
 
+cd %~dp0
 
 rem %~dp0 　⇒　%0にオプション構文の『 ~ 』と『 d 』と『 p 』が付いたものです。
 rem ~　　　⇒　(ダブルクオート)を除く

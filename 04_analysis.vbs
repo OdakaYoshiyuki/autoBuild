@@ -92,8 +92,13 @@ Do Until rFile.AtEndOfStream
 	If hit <> 0 Then
 		wFile.WriteLine tmpLine
 	End If
-		'エラーを探索
+	'エラーを探索
 	hit = InStr( tmpLine, "ビルドに失敗しました。" )      '検索する
+	If hit <> 0 Then
+		wFile.WriteLine tmpLine
+	End If
+	'完了
+	hit = InStr( tmpLine, "のビルドが完了しました。" )      '検索する
 	If hit <> 0 Then
 		wFile.WriteLine tmpLine
 	End If
