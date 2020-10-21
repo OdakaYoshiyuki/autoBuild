@@ -78,14 +78,23 @@ Do Until rFile.AtEndOfStream
 		buildFaliNum = 0
 	End If
 
-	hit = InStr( tmpLine, "SIM 2YJ環境のビルド" )      '検索する
+	hit = InStr( tmpLine, "SIM 2YJ_Printer のビルド" )      '検索する
 	If hit <> 0 Then
-		wFile.WriteLine "SIM 2YJ環境のビルド結果"
+		wFile.WriteLine "SIM 2YJ_Printer のビルド結果"
 	End If
-	hit = InStr( tmpLine, "SIM 0000環境のビルド" )      '検索する
+	hit = InStr( tmpLine, "SIM 2YJ_MFP のビルド" )      '検索する
+	If hit <> 0 Then
+		wFile.WriteLine "SIM 2YJ_MFP のビルド結果"
+	End If
+	hit = InStr( tmpLine, "SIM 0000_Printer のビルド" )      '検索する
 	If hit <> 0 Then
 		wFile.WriteLine ""
-		wFile.WriteLine "SIM 0000環境のビルド結果"
+		wFile.WriteLine "SIM 0000_Printer のビルド結果"
+	End If
+	hit = InStr( tmpLine, "SIM 0000_MFP のビルド" )      '検索する
+	If hit <> 0 Then
+		wFile.WriteLine ""
+		wFile.WriteLine "SIM 0000_MFP のビルド結果"
 	End If
 	hit = InStr( tmpLine, "Keil 2YJ環境のビルド" )      '検索する
 	If hit <> 0 Then

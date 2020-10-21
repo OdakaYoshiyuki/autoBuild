@@ -12,17 +12,28 @@ rem PJnaemをsetingファイルから読み込む
 
 rem MSBuildでビルドする(C++)
 cd %~dp0
-echo SIM 2YJ環境のビルド
-MSBuild ..\%PJ_NAME%\project\02YJ\build_sim\TARGET.sln /t:rebuild
-
+echo SIM 2YJ_Printer のビルド
+MSBuild ..\%PJ_NAME%\project\02YJ\build_sim\TARGET.sln /p:Configuration=Release_Printer /t:rebuild
+if %ERRORLEVEL% neq 0 (
+    echo ErrorLevel:%ERRORLEVEL%
+    echo ビルド失敗
+)
+echo SIM 2YJ_MFP のビルド
+MSBuild ..\%PJ_NAME%\project\02YJ\build_sim\TARGET.sln /p:Configuration=Release_MFP /t:rebuild
 if %ERRORLEVEL% neq 0 (
     echo ErrorLevel:%ERRORLEVEL%
     echo ビルド失敗
 )
 
-echo SIM 0000環境のビルド
-MSBuild ..\%PJ_NAME%\project\0000\build_sim\TARGET.sln /t:rebuild
 
+echo SIM 0000_Printer のビルド
+MSBuild ..\%PJ_NAME%\project\0000\build_sim\TARGET.sln /p:Configuration=Release_Printer /t:rebuild
+if %ERRORLEVEL% neq 0 (
+    echo ErrorLevel:%ERRORLEVEL%
+    echo ビルド失敗
+)
+echo SIM 0000_MFP のビルド
+MSBuild ..\%PJ_NAME%\project\0000\build_sim\TARGET.sln /p:Configuration=Release_MFP /t:rebuild
 if %ERRORLEVEL% neq 0 (
     echo ErrorLevel:%ERRORLEVEL%
     echo ビルド失敗
