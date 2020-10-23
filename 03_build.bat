@@ -42,8 +42,8 @@ if %ERRORLEVEL% neq 0 (
 if not %BUILD_TYPE% == Keilでビルドする GOTO BAT_END
 
 echo Keil 2YJ環境のビルド
-cd ..\%PJ_NAME%\project\02YJ\build_target\TARGET_main
-call release_MFP.BAT
+"C:\Keil527\UV4\UV4.exe" -l log.txt UV4 -r ..\%PJ_NAME%\project\02YJ\build_target\TARGET_main\TARGET_main.uvprojx -j0
+type log.txt
 
 rem echo Keil 0000環境のビルド
 
@@ -57,3 +57,4 @@ rem ~　　　⇒　(ダブルクオート)を除く
 rem %0  実行されているファイルのパスです。 "C:\･･･\･･･\" こんな感じで　ダブルクオートが邪魔になるため、%~0 として
 
 
+pause
