@@ -42,10 +42,12 @@ if %ERRORLEVEL% neq 0 (
 if not %BUILD_TYPE% == Keilでビルドする GOTO BAT_END
 
 echo Keil 2YJ環境のビルド
-"C:\Keil527\UV4\UV4.exe" -l log.txt UV4 -r ..\%PJ_NAME%\project\02YJ\build_target\TARGET_main\TARGET_main.uvprojx -j0
+"C:\Keil527\UV4\UV4.exe" UV4 -r ..\%PJ_NAME%\project\02YJ\build_target\TARGET_main\TARGET_main.uvprojx -l log.txt -j0
 type log.txt
 
-rem echo Keil 0000環境のビルド
+echo Keil 0000環境のビルド
+"C:\Keil527\UV4\UV4.exe" UV4 -r ..\%PJ_NAME%\project\0000\build_target\TARGET_main\TARGET_main.uvprojx -l log.txt -j0
+type log.txt
 
 
 :BAT_END
