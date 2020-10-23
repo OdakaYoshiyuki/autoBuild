@@ -122,8 +122,21 @@ Do Until rFile.AtEndOfStream
 	hit2 = InStr( tmpLine, "のビルドが完了しました" )      '検索する
 	If (hit <> 0) and (hit2 <> 0) Then
 		wFile.WriteLine tmpLine
+		wFile.WriteLine "    " & buildWarningNum & " 個の警告"
+		buildWarningNum = 0
 		tmpLine = rFile.ReadLine
+		wFile.WriteLine "    " & buildFaliNum & " エラー"
+		buildFaliNum = 0
+	End If
+	hit = InStr( tmpLine, "MFP_1000" )      '検索する
+	hit2 = InStr( tmpLine, "のビルドが完了しました" )      '検索する
+	If (hit <> 0) and (hit2 <> 0) Then
 		wFile.WriteLine tmpLine
+		wFile.WriteLine "    " & buildWarningNum & " 個の警告"
+		buildWarningNum = 0
+		tmpLine = rFile.ReadLine
+		wFile.WriteLine "    " & buildFaliNum & " エラー"
+		buildFaliNum = 0
 	End If
 Loop
 
