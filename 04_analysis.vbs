@@ -101,6 +101,11 @@ Do Until rFile.AtEndOfStream
 		wFile.WriteLine ""
 		wFile.WriteLine "Keil 2YJ環境のビルド結果"
 	End If
+	hit = InStr( tmpLine, "Keil 0000環境のビルド" )      '検索する
+	If hit <> 0 Then
+		wFile.WriteLine ""
+		wFile.WriteLine "Keil 0000環境のビルド結果"
+	End If
 
 	'その他のコメント
 	hit = InStr( tmpLine, "ビルドに成功しました。" )      '検索する
