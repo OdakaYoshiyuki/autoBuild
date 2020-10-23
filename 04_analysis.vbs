@@ -117,6 +117,8 @@ Do Until rFile.AtEndOfStream
 	hit2 = InStr( tmpLine, "‚Ìƒrƒ‹ƒh‚ªŠ®—¹‚µ‚Ü‚µ‚½" )      'ŒŸõ‚·‚é
 	If (hit <> 0) and (hit2 <> 0) Then
 		wFile.WriteLine tmpLine
+		tmpLine = rFile.ReadLine
+		wFile.WriteLine tmpLine
 	End If
 Loop
 
