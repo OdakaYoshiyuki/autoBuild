@@ -10,7 +10,7 @@ rem setingファイルから読み込む
 )< setting.txt
 
 if %P4_SYNC% == P4を最新にする echo %P4_PASS% | p4 login
-if %P4_SYNC% == P4を最新にする p4 set %PJ_NAME%
+if %P4_SYNC% == P4を最新にする p4 set P4CLIENT=%PJ_NAME%
 if %P4_SYNC% == P4を最新にする p4 sync
 
 git pull origin master
