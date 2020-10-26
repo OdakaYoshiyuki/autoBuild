@@ -96,15 +96,25 @@ Do Until rFile.AtEndOfStream
 		wFile.WriteLine ""
 		wFile.WriteLine "SIM 0000_MFP のビルド結果"
 	End If
-	hit = InStr( tmpLine, "Keil 2YJ環境のビルド" )      '検索する
+	hit = InStr( tmpLine, "Keil 2YJ_Printer環境のビルド" )      '検索する
 	If hit <> 0 Then
 		wFile.WriteLine ""
-		wFile.WriteLine "Keil 2YJ環境のビルド結果"
+		wFile.WriteLine "Keil 2YJ_Printer環境のビルド結果"
 	End If
-	hit = InStr( tmpLine, "Keil 0000環境のビルド" )      '検索する
+	hit = InStr( tmpLine, "Keil 2YJ_MFP環境のビルド" )      '検索する
 	If hit <> 0 Then
 		wFile.WriteLine ""
-		wFile.WriteLine "Keil 0000環境のビルド結果"
+		wFile.WriteLine "Keil 2YJ_MFP環境のビルド結果"
+	End If
+	hit = InStr( tmpLine, "Keil 0000_Printer環境のビルド" )      '検索する
+	If hit <> 0 Then
+		wFile.WriteLine ""
+		wFile.WriteLine "Keil 0000_Printer環境のビルド結果"
+	End If
+	hit = InStr( tmpLine, "Keil 0000_MFP環境のビルド" )      '検索する
+	If hit <> 0 Then
+		wFile.WriteLine ""
+		wFile.WriteLine "Keil 0000_MFP環境のビルド結果"
 	End If
 
 	'その他のコメント
