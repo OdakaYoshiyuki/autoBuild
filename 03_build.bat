@@ -5,7 +5,6 @@ call "C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\VsDevCmd
 rem PJnaemをsetingファイルから読み込む
 (
     SET /P PJ_NAME=
-    SET /P BUILD_TYPE=
 )< setting.txt
 
 
@@ -39,7 +38,6 @@ if %ERRORLEVEL% neq 0 (
     echo ビルド失敗
 )
 
-if not %BUILD_TYPE% == Keilでビルドする GOTO BAT_END
 
 echo Keil 2YJ_Printer環境のビルド
 "C:\Keil527\UV4\UV4.exe" UV4 -r ..\%PJ_NAME%\project\02YJ\build_target\TARGET_main\TARGET_main.uvprojx -t release_Printer -l log.txt -j0
@@ -57,12 +55,4 @@ echo Keil 0000_MFP環境のビルド
 "C:\Keil527\UV4\UV4.exe" UV4 -r ..\%PJ_NAME%\project\0000\build_target\TARGET_main\TARGET_main.uvprojx -t release_MFP -l log.txt -j0
 type log.txt
 
-
-:BAT_END
-
-cd %~dp0
-
-rem %~dp0 　⇒　%0にオプション構文の『 ~ 』と『 d 』と『 p 』が付いたものです。
-rem ~　　　⇒　(ダブルクオート)を除く
-rem %0  実行されているファイルのパスです。 "C:\･･･\･･･\" こんな感じで　ダブルクオートが邪魔になるため、%~0 として
 
