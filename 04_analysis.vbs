@@ -35,7 +35,7 @@ rFile.Close
 ' result.txtを解析して本文を作成
 Set wFile = FS.OpenTextFile("本文.txt", 2, True)
 wFile.WriteLine "お疲れ様です"
-wFile.WriteLine "ESD 小高さんのPCです"
+wFile.WriteLine "ESD 小高です"
 wFile.WriteLine ""
 wFile.WriteLine "最新環境ビルドを行いました"
 wFile.WriteLine "結果は下記です。"
