@@ -19,7 +19,7 @@ git pull origin master
 
 call 03_build.bat > result.txt
 cscript 04_analysis.vbs
-cscript 05_mail.vbs
+call mail.exe
 
-
+rem cscript 05_mail.vbs
 
